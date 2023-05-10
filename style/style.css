@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+
+:root {
+    --cor-primaria: #F7F6F2 ;
+    --cor-secundaria: #4B6587;
+    --cor-terciaria: #8B7E74 ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria); /* Cor do texto */
+} 
+
+.cabecalho {
+    padding: 2% 0 0 15%;
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+    font-weight: bold;
+}
+
+.cabecalho__menu__link{
+    color: var(--cor-terciaria);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600px;
+    text-decoration: none;
+}
+
+.titulo-destaque { 
+    color: var(--cor-terciaria);
+ } /* Titulo principal */
+ 
+.apresentacao{
+    gap: 82px;
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+} 
+
+.apresentacao__conteudo__titulo {
+    font-family:'Krona One', sans-serif;;
+    font-size: 2.25rem;
+} 
+
+.apresentacao__conteudo__texto {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+} /* Aqui está definido o subtitulo */
+
+.apresentacao__links__subtitulo {
+    font-family: "Krona One" , sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+} /* Corpo do texto */
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+    gap: 32px;
+} /* Subtitulo das redes sociais: */
+
+.github__botao {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 3px solid var(--cor-terciaria);
+    text-align: center;
+    width: 50%;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+} 
+
+.linkedin__botao {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 3px solid var(--cor-terciaria);
+    text-align: center;
+    width: 50%;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+} 
+
+.twitch__botao { 
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 3px solid var(--cor-terciaria);
+    text-align: center;
+    width: 50%;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    
+} 
+
+.apresentacao_imagem {
+    width: 50%;
+}
+
+.github__botao:hover {
+    border:3px solid rgb(194, 194, 194);
+    animation: github-border 1s infinite;
+    font-size: 1.75rem;
+} 
+
+.linkedin__botao:hover {
+    border:3px solid rgb(27, 18, 160);
+    animation: linkedin-border 1s infinite;
+    font-size: 1.75rem;
+} 
+
+.twitch__botao:hover {
+    border:3px solid purple;
+    animation: twitch-border 1s infinite;
+    font-size: 1.75rem;
+} 
+
+.github__botao:hover img {
+    transform: scale(1.1);
+} 
+
+.linkedin__botao:hover img {
+    transform: scale(1.1);
+} 
+
+.twitch__botao:hover img {
+    transform: scale(1.1);
+} 
+
+@keyframes github-border {
+    0% {
+        border-color: rgb(0, 0, 0);
+    }
+    50% {
+        border-color: #6b6b6b;
+    }
+    100% {
+        border-color: rgb(0, 0, 0);
+    }
+} /* Transição da borda do github */ 
+
+@keyframes linkedin-border {
+    0% {
+        border-color: #6b6b6b
+    }
+    50% {
+        border-color: rgb(17, 0, 255);
+    }
+    100% {
+        border-color: #6b6b6b;
+    }
+} /* Transição da borda do linkedin */ 
+
+@keyframes twitch-border {
+    0% {
+        border-color: rgb(192, 0, 192);
+    }
+    50% {
+        border-color: #440191;
+    }
+    100% {
+        border-color: rgb(192, 0, 192);
+    }
+} /* Transição da borda da twitch */ 
+
+.rodape {
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 26px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+} 
+
+@media (max-width: 1265px) {
+
+    .cabecalho {
+        padding: 10%;
+}
+
+    .cabecalho__menu {
+       justify-content: center;
+    }
+
+    .apresentacao {
+    flex-direction: column-reverse;
+    padding: 5%;
+}
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+}
